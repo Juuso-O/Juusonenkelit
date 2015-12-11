@@ -1,11 +1,11 @@
-.. code:: robotframework  
-  *** Settings ***  
+.. code:: robotframework
+  *** Settings ***
   Documentation  RT4:n HENKILÖKOHTAINEN osa  
   ...  tekijänä Niko Jokipalo (@njokipal)  
   Test Setup  Open Browser To JAMK  
   Resource  resources.robot  
 
- *** Test Cases ***  
+ *** Test Cases ***
  User tries to find info about branch  
     [Documentation]  Avataan jamk.fi ja koitetaan löytää  
     ...  tietoja opintohaarasta.  
@@ -14,7 +14,7 @@
     Say hello  
     [Teardown]  Close All Browsers  
 
- *** Keywords ***  
+ *** Keywords ***
  Search for branch "${branch}"  
     Input Text  xpath=//*[@id="Content_MainMenu_SearchPanel"]/div/input[1]  ${branch}  
     Click Link  Hae  
