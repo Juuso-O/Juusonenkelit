@@ -1,17 +1,18 @@
-*** Settings ***
-Documentation  RT4:n HENKILÖKOHTAINEN osa
-...  tekijänä Niko Jokipalo (@njokipal)
-Test Setup  Open Browser To JAMK
-Resource  resources.robot
+.. code:: robotframework
+  *** Settings ***
+  Documentation RT4:n HENKILÖKOHTAINEN osa
+  ...           tekijänä Niko Jokipalo (@njokipal)
+  Test Setup    Open Browser To JAMK
+  Resource      resources.robot
 
 *** Test Cases ***
 User tries to find info about branch
-  [Documentation]  Avataan jamk.fi ja koitetaan löytää
-  ...  tietoja opintohaarasta.
-  Search for branch "ohjelmistotekniikka"
-  Click First Result
-  Say hello
-  [Teardown]  Close All Browsers
+    [Documentation] Avataan jamk.fi ja koitetaan löytää
+    ...             tietoja opintohaarasta.
+    Search for branch "ohjelmistotekniikka"
+    Click First Result
+    Say hello
+    [Teardown]  Close All Browsers
 
 *** Keywords ***
 Search for branch "${branch}"
