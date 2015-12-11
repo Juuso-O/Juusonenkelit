@@ -1,5 +1,5 @@
-.. code:: robotframework
-  *** Settings ***
+.. code:: robotframework  
+  *** Settings ***  
   Documentation RT4:n HENKILÖKOHTAINEN osa  
   ...           tekijänä Niko Jokipalo (@njokipal)  
   Test Setup    Open Browser To JAMK  
@@ -25,8 +25,11 @@ Click First Result
 
 Leave Comment  
     Click Link  Lisätiedot  
+    
     Input Text  id=Content_Content_ctl00_ContentArea8Property_ctl00_ctl02_ctl00_ctl00_ctl00_ctl00_viesti  Miljoonabisnes!  
+    
     Input Text  id=Content_Content_ctl00_ContentArea8Property_ctl00_ctl02_ctl00_ctl00_ctl00_ctl00_nimi  Terveisiä Narsulle  
+    
     Input Text  id=Content_Content_ctl00_ContentArea8Property_ctl00_ctl02_ctl00_ctl00_ctl00_ctl00_email  cashMoney@moMoney.biz  
 
 Say Hello  
