@@ -4,10 +4,13 @@ Test Scenario
 ============
 
 Browser: Firefox
+
 Operation System: Windows 10
 
 Actor: Happy Man  
+
 Occupation: Jamk university of applied sciences   
+
 Age: 22  
 
 Happy man is a young student at Jamk. One day Happy Man decided to use jamk website to get info about his studying related information
@@ -22,7 +25,7 @@ Roles: Common Users
 =============
 Test Execution
 =============
-Happy Man had an idea which related to Innovation and Entrepreunership and he decided to go ahead and search for his specific article in Jamk official website
+Happy Man had an idea which related to Innovation and Entrepreunership and he decided to go ahead and search for his specific article in Jamk official website.
 
 .. code:: robotframework 
 
@@ -34,7 +37,7 @@ Happy Man had an idea which related to Innovation and Entrepreunership and he de
 	Test Teardown  Close test browser
 	Resource resources.robot
 
-The finable article for Happy man is "Cybersecurity" and as the teacher mentioned it should be in http://www.jamk.fi/en/Research-and-Development/ and the findable word is "INKA programme"
+The finable article for Happy man is "Cybersecurity" and as the teacher mentioned it should be in http://www.jamk.fi/en/Research-and-Development/ and the findable word is "INKA programme".
 
 .. code:: robotframework  
 
@@ -44,7 +47,7 @@ The finable article for Happy man is "Cybersecurity" and as the teacher mentione
 	${URL} http://www.jamk.fi/en/Research-and-Development/  
 	${DELAY} 1.5  
 	
-Happy man started up his device and opened firefox browser and typed http://www.jamk.fi/fi/Tutkimus-ja-kehitys/ into firefox 	search bar and find the Cybersecurity article which then 
+Happy man started up his device and opened firefox browser and typed http://www.jamk.fi/fi/Tutkimus-ja-kehitys/ into firefox 	search bar and find the Cybersecurity article which then he clicks on the article image and tries to find the specific word.
 
 .. code:: robotframework   
 
@@ -61,8 +64,10 @@ Happy man started up his device and opened firefox browser and typed http://www.
 	
 	    Page should contain  ${Findable_word}
 	    
-	[Teardown] Close All Browsers
-    
+	[Teardown] Close All Browser  
+	
+Happy Man finnished finally his searching he closes web browser.
+
 .. code:: robotframework  
 
 	*** Keywords ***
