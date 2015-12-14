@@ -1,49 +1,46 @@
-Juuson Robotti  
---------------
-  
-*** Settings ***  
+===========
+Asetukset
+===========
 
-Documentation  Avataan Jamkin sivut  
+Määritellään projektin asetukset eli oikeastaan Resource file ja ajetaan sieltä pari judduja joilla päädytään jamkin etusivulle.
 
-.. Juuso Ohra-aho (@Juuso-O)  
+.. code:: robotframework  
 
-Test Setup  Open Browser To Jamk  
+	*** Settings ***  
+	Documentation  Avataan Jamkin sivut  
+	.. Juuso Ohra-aho (@Juuso-O)  
+	Test Setup  Open Browser To Jamk  
+	Resource  juusonResources.robot  
 
-Resource  juusonResources.robot  
+=====
+Test Cases
+=====
 
+Testikeissit jotka ajetaan tässä järjestyksessä.
 
-*** Test Cases ***  
+.. code:: robotframework  
 
-Jamk Opened  
-
+	*** Test Cases ***  
+	Jamk Opened  
 	Open JamkYhteystiedot  
-	
-	.. Jamkin yhteystietosivu  
-	
 	Search Matti  
-	
-	.. Matin etsintä boksista  
-	
 	Say hello  
-	
-	.. Lokitiedoston kirjaus  
-	
 	[Teardown]  Close All Browsers  
-	
-	.. Selaimen sulkeminen  
   	
-*** Keywords ***  
+=====
+Keywords
+=====
 
-Open JamkYhteystiedot  
+Näitä ajellaan noissa teistikeisseissä yläpuolella.
 
-	Click Link  Henkilökunnan yhteystiedot  
-  
-Search Matti  
+.. code:: robotframework  
 
-	Input Text  xpath=//input[@id='Content_HeaderContent_SearchQuery']  Matti Mieskolainen  
-	Click Link  Content_HeaderContent_SearchButton  
-  
-Say Hello  
-
-	Log	moro paskoille	
+	*** Keywords ***  
+	Open JamkYhteystiedot  
+		Click Link  Henkilökunnan yhteystiedot  
+	Search Matti  
+		Input Text  xpath=//input[@id='Content_HeaderContent_SearchQuery']  Matti Mieskolainen  
+		Click Link  Content_HeaderContent_SearchButton  
+	Say Hello  
+		Log	moro paskoille	
 
