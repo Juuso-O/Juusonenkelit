@@ -4,33 +4,31 @@ Documentation  Pasin ikioma ropotti
 
 Resource  resources.robot  
 
-   
-*** Test Cases ***  
+
+=================
+Scenario 1 Tests
+=================
 
 Hermanni käy jamkin sivuilla toiveena löytää Java-aiheista luettavaa. Etusivuilta hän löytää linkin Kirjastoon josta hän hakee
 kirjoja hakusanalla Java.
 
-  Open Browser To JAMK  
-  
-  Click Kirjasto  
-  
-  Insert Text  
-  
-  [Teardown]  Close All Browsers  
-  
-  
-*** Keywords ***  
 
-Click Kirjasto   
+.. code:: robotframework
 
-  Click Element  xpath=//*[@id="form1"]/footer/section[2]/div/div/div[3]/ul/li[7]/a  
+   *** Test Cases ***  
+      Open Browser To JAMK  
+      Click Kirjasto  
+      Insert Text  
+      [Teardown]  Close All Browsers  
   
-  Title Should Be  Etusivu - JAMK  
-  
-   
-Insert Text  
+.. code:: robotframework
 
-  Input Text  //*[@id="Content_Content_Content_ctl00_ContentArea1Property_ctl00_ctl01_ctl00_SearchPanel"]/div/input  java  
+   *** Keywords ***  
+   Click Kirjasto   
+      Click Element  xpath=//*[@id="form1"]/footer/section[2]/div/div/div[3]/ul/li[7]/a  
+      Title Should Be  Etusivu - JAMK  
   
-  Click Element  //*[@id="Content_Content_Content_ctl00_ContentArea1Property_ctl00_ctl01_ctl00_SearchPanel"]/div/a   
+   Insert Text  
+       Input Text  //*[@id="Content_Content_Content_ctl00_ContentArea1Property_ctl00_ctl01_ctl00_SearchPanel"]/div/input  java  
+      Click Element  //*[@id="Content_Content_Content_ctl00_ContentArea1Property_ctl00_ctl01_ctl00_SearchPanel"]/div/a   
   
