@@ -2,9 +2,10 @@ Juuson Robotti
 --------------
   
 *** Settings ***  
+
 Documentation  Avataan Jamkin sivut  
 
-... Juuso Ohra-aho (@Juuso-O)  
+.. Juuso Ohra-aho (@Juuso-O)  
 
 Test Setup  Open Browser To Jamk  
 
@@ -15,19 +16,19 @@ Resource  juusonResources.robot
 Jamk Opened  
 	Open JamkYhteystiedot  
 	
-	... Jamkin yhteystietosivu  
+	.. Jamkin yhteystietosivu  
 	
 	Search Matti  
 	
-	... Matin etsintä boksista  
+	.. Matin etsintä boksista  
 	
 	Say hello  
 	
-	... Lokitiedoston kirjaus  
+	.. Lokitiedoston kirjaus  
 	
 	[Teardown]  Close All Browsers  
 	
-	... Selaimen sulkeminen  
+	.. Selaimen sulkeminen  
   	
 *** Keywords ***  
 Open JamkYhteystiedot  
