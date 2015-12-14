@@ -7,7 +7,7 @@ Resource  resources.robot
    
 *** Test Cases ***  
 
-Go To Library  
+Käyttäjä käy etsimässä koulun kirjastosta Java kirjoja. 
 
   Open Browser To JAMK  
   
