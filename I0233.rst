@@ -22,19 +22,19 @@ Trying to navigate throw jamk website and perform multiple testcases
 [Documentation] Avatann muuttujaan sijoitetun nettisivun linkin 
     Go to  ${URL}
     
-.. Sivun täytyy sisältää "Näytä lisää" nappia
+... Sivun täytyy sisältää "Näytä lisää" nappia
     Page should contain element  id=Content_Content_ctl00_ContentArea1Property_ctl00_ctl01_ctl00_Container
     
-.. Klikataan napin niin javascript tekee loput hommia 
+... Klikataan napin niin javascript tekee loput hommia 
     Click button  id=ctl00_ctl00_Content_Content_ctl00_ContentArea1Property_ctl00_ctl02_ctl00_Items_ctl04_ShowMore
     
-.. Klikataan seuraavan linkin 
+... Klikataan seuraavan linkin 
     Click Link xpath=//a[@href='/fi/Uutiset/jamkin-opinnaytetyo-suomen-peliteollisuuden-tyontekijat-voivat-hyvin/']
     
-.. Sivun tulee sisältää etsittävän sanan 
+... Sivun tulee sisältää etsittävän sanan 
     Page should contain  ${Findable_word}
     
-.. Suljetaan Kaikki ikkunat 
+... Suljetaan Kaikki ikkunat 
     [Teardown] Close All Browsers
 
 *** Keywords ***
