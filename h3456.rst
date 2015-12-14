@@ -1,8 +1,7 @@
-*** Settings ***  
-
-Documentation  Pasin ikioma ropotti  
-
-Resource  resources.robot  
+.. code:: robotframework  
+    *** Settings ***   
+      Documentation  Pasin ikioma ropotti   
+      Resource  resources.robot   
 
 
 =================
