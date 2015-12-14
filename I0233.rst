@@ -19,12 +19,11 @@ Other Actors: None
 
 Roles: Common Users
 
-==============
+=============
 Test Execution
-==============
+=============
+Happy Man had an idea which related to Innovation and Entrepreunership and he decided to go ahead and search for his specific article in Jamk official website
 
-Happy man started up his device and opened firefox browser and typed http://www.jamk.fi/fi/Tutkimus-ja-kehitys/ into firefox search bar
-   
 .. code:: robotframework 
 
 	*** Settings ***
@@ -35,15 +34,19 @@ Happy man started up his device and opened firefox browser and typed http://www.
 	Test Teardown  Close test browser
 	Resource resources.robot
 
+The finable article for Happy man is "Cybersecurity" and as the teacher mentioned it should be in http://www.jamk.fi/en/Research-and-Development/ and the findable word is "INKA programme"
+
 .. code:: robotframework  
 
 	*** Variables ***  
-	${Findable_word}  Work-Life Balance in Finnish game industry
+	${Findable_word}  INKA programme
 	${BROWSER}  firefox 
-	${URL} http://www.jamk.fi/fi/Tutkimus-ja-kehitys/   
+	${URL} http://www.jamk.fi/en/Research-and-Development/  
 	${DELAY} 1.5  
+	
+Happy man started up his device and opened firefox browser and typed http://www.jamk.fi/fi/Tutkimus-ja-kehitys/ into firefox 	search bar and find the Cybersecurity article which then 
 
-.. code:: robotframework  
+.. code:: robotframework   
 
 	*** Test Cases ***
 	Trying to navigate throw jamk website and perform multiple testcases 
@@ -51,13 +54,9 @@ Happy man started up his device and opened firefox browser and typed http://www.
 	
 	    Go to  ${URL}
 	    
-	    Page should contain element  id=Content_Content_ctl00_ContentArea1Property_ctl00_ctl01_ctl00_Container
-	    
-	
-	    Click button  id=ctl00_ctl00_Content_Content_ctl00_ContentArea1Property_ctl00_ctl02_ctl00_Items_ctl04_ShowMore
-	    
-	
-	    Click Link xpath=//a[@href='/fi/Uutiset/jamkin-opinnaytetyo-suomen-peliteollisuuden-tyontekijat-voivat-hyvin/']
+	    Page should contain link /en/Research-and-Development/Focus-areas/Cybersecurity/
+	  
+	    Click Link xpath=//a[@href='/en/Research-and-Development/Focus-areas/Cybersecurity/']
 	    
 	
 	    Page should contain  ${Findable_word}
