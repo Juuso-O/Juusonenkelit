@@ -13,7 +13,9 @@ Resource  juusonResources.robot
 
 
 *** Test Cases ***  
+
 Jamk Opened  
+
 	Open JamkYhteystiedot  
 	
 	.. Jamkin yhteystietosivu  
@@ -31,13 +33,17 @@ Jamk Opened
 	.. Selaimen sulkeminen  
   	
 *** Keywords ***  
+
 Open JamkYhteystiedot  
+
 	Click Link  Henkilökunnan yhteystiedot  
   
 Search Matti  
+
 	Input Text  xpath=//input[@id='Content_HeaderContent_SearchQuery']  Matti Mieskolainen  
 	Click Link  Content_HeaderContent_SearchButton  
   
 Say Hello  
+
 	Log	moro paskoille	
 
