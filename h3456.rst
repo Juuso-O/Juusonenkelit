@@ -7,7 +7,8 @@ Resource  resources.robot
    
 *** Test Cases ***  
 
-Käyttäjä käy etsimässä koulun kirjastosta Java kirjoja. 
+Hermanni käy jamkin sivuilla toiveena löytää Java-aiheista luettavaa. Etusivuilta hän löytää linkin Kirjastoon josta hän hakee
+kirjoja hakusanalla Java.
 
   Open Browser To JAMK  
   
