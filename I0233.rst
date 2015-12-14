@@ -39,4 +39,4 @@ Open test browser
 	Set Selenium Speed  ${DELAY}
 	Title Should Be  Tutkimus-, kehitys- ja innovaatiotyö - JAMK
 	
-    Close all browsers
+    [Teardown] Close All Browsers
