@@ -1,52 +1,87 @@
-*** Settings ***
 
-Documentation  Ali Nadhum RT4
+============
+Test Scenario
+============
 
-Test Setup   Open Browser To Jamk
-Test Teardown  Close test browser
-Resource resources.robot
+Browser: Firefox
+Operation System: Windows 10
+
+Actor: Happy Man  
+Occupation: Jamk university of applied sciences   
+Age: 22  
+
+Happy man is a young student at Jamk. One day Happy Man decided to use jamk website to get info about his studying related information
+
+
+Primary Actor: Happy Man
+
+Other Actors: None
+
+Roles: Common Users
+
+==============
+Test Execution
+==============
+
+Happy man started up his device and opened firefox browser and typed http://www.jamk.fi/fi/Tutkimus-ja-kehitys/ into firefox search bar
+   
+.. code:: robotframework 
+
+	*** Settings ***
+	
+	Documentation  Ali Nadhum RT4
+	
+	Test Setup   Open Browser To Jamk
+	Test Teardown  Close test browser
+	Resource resources.robot
+
+.. code:: robotframework  
 
 *** Variables ***
 
-${Findable_word}  Work-Life Balance in Finnish game industry
-
-${BROWSER}  firefox
-${URL} http://www.jamk.fi/fi/Tutkimus-ja-kehitys/
-${DELAY} 1.5
-
-${LOGIN_FAIL_MSG}  Incorrect username or password.
-
-*** Test Cases ***
-Trying to navigate throw jamk website and perform multiple testcases 
-
-[Documentation] Avatann muuttujaan sijoitetun nettisivun linkin 
-    Go to  ${URL}
-    
-... Sivun täytyy sisältää "Näytä lisää" nappia
-    Page should contain element  id=Content_Content_ctl00_ContentArea1Property_ctl00_ctl01_ctl00_Container
-    
-... Klikataan napin niin javascript tekee loput hommia 
-    Click button  id=ctl00_ctl00_Content_Content_ctl00_ContentArea1Property_ctl00_ctl02_ctl00_Items_ctl04_ShowMore
-    
-... Klikataan seuraavan linkin 
-    Click Link xpath=//a[@href='/fi/Uutiset/jamkin-opinnaytetyo-suomen-peliteollisuuden-tyontekijat-voivat-hyvin/']
-    
-... Sivun tulee sisältää etsittävän sanan 
-    Page should contain  ${Findable_word}
-    
-... Suljetaan Kaikki ikkunat 
-    [Teardown] Close All Browsers
-
-*** Keywords ***
-
-Open test browser
-
-	Open Browser  ${URL}  ${BROWSER}  
+	${Findable_word}  Work-Life Balance in Finnish game industry
 	
-	Maximize Browser Window  
+	${BROWSER}  firefox
+	${URL} http://www.jamk.fi/fi/Tutkimus-ja-kehitys/
+	${DELAY} 1.5
 	
-	Set Selenium Speed  ${DELAY}  
-	
-	Title Should Be  Tutkimus-, kehitys- ja innovaatiotyö - JAMK  
+	${LOGIN_FAIL_MSG}  Incorrect username or password.
 
-[Teardown] Close All Browsers
+.. code:: robotframework  
+
+	*** Test Cases ***
+	Trying to navigate throw jamk website and perform multiple testcases 
+	
+	
+	    Go to  ${URL}
+	    
+	    Page should contain element  id=Content_Content_ctl00_ContentArea1Property_ctl00_ctl01_ctl00_Container
+	    
+	
+	    Click button  id=ctl00_ctl00_Content_Content_ctl00_ContentArea1Property_ctl00_ctl02_ctl00_Items_ctl04_ShowMore
+	    
+	
+	    Click Link xpath=//a[@href='/fi/Uutiset/jamkin-opinnaytetyo-suomen-peliteollisuuden-tyontekijat-voivat-hyvin/']
+	    
+	
+	    Page should contain  ${Findable_word}
+	    
+	[Teardown] Close All Browsers
+    
+.. code:: robotframework  
+
+	*** Keywords ***
+	
+	Open test browser
+	
+		Open Browser  ${URL}  ${BROWSER}  
+		
+		Maximize Browser Window  
+		
+		Set Selenium Speed  ${DELAY}  
+		
+		Title Should Be  Tutkimus-, kehitys- ja innovaatiotyö - JAMK  
+	
+	[Teardown] Close All Browsers
+
+.. code:: robotframework  
