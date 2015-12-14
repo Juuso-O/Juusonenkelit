@@ -34,9 +34,9 @@ Trying to navigate throw jamk website
 
 Open test browser
 
-	Open Browser  ${URL}  ${BROWSER}
-	Maximize Browser Window
-	Set Selenium Speed  ${DELAY}
-	Title Should Be  Tutkimus-, kehitys- ja innovaatiotyö - JAMK
+	Open Browser  ${URL}  ${BROWSER}  
+	Maximize Browser Window  
+	Set Selenium Speed  ${DELAY}  
+	Title Should Be  Tutkimus-, kehitys- ja innovaatiotyö - JAMK  
 	
     [Teardown] Close All Browsers
